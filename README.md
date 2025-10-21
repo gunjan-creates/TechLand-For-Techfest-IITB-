@@ -22,7 +22,7 @@ Deployment-ready: Can be deployed on platforms like Netlify or Vercel.
 
 Live Demo
 
-comming shortly
+https://gunjan-creates.github.io/TechLand-For-Techfest-IITB-/
 
 
 Features
