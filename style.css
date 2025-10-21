@@ -1,0 +1,310 @@
+/* ================== Global Styles ================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', Arial, sans-serif;
+  line-height: 1.6;
+  color: #222;
+  background: #f4f7f9;
+  scroll-behavior: smooth;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ================== Header / Navbar ================== */
+header {
+  background: linear-gradient(90deg, #ff416c, #ff4b2b);
+  color: #fff;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  animation: fadeDown 0.8s ease forwards;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #fff;
+  left: 0;
+  bottom: -3px;
+  transition: 0.3s ease;
+}
+
+nav a:hover::after,
+nav a:focus::after {
+  width: 100%;
+}
+
+nav a:hover,
+nav a:focus {
+  background: rgba(255,255,255,0.2);
+  transform: scale(1.05);
+  outline: none;
+}
+
+/* ================== Hero Section ================== */
+#hero {
+  background: linear-gradient(to right, #1f4037, #99f2c8);
+  color: #fff;
+  text-align: center;
+  padding: 6rem 1rem 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#hero h2 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  animation: fadeUp 1s ease forwards;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+
+#hero p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin-bottom: 2rem;
+  animation: fadeUp 1.2s ease forwards;
+}
+
+#hero .btn {
+  padding: 0.8rem 2.2rem;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  background: #ff416c;
+  color: #fff;
+  font-weight: 700;
+  transition: transform 0.3s ease, background 0.3s ease;
+  animation: fadeUp 1.4s ease forwards;
+}
+
+#hero .btn:hover,
+#hero .btn:focus {
+  background: #ff4b2b;
+  transform: translateY(-3px);
+  outline: none;
+}
+
+/* ================== Features / Tech Stack Section ================== */
+#features {
+  padding: 4rem 1rem;
+  text-align: center;
+  background-color: #fff;
+}
+
+#features h2 {
+  font-size: 2.4rem;
+  margin-bottom: 2.5rem;
+  color: #ff416c;
+  letter-spacing: 1px;
+}
+
+.tech-stack {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 2rem;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.tech-stack li {
+  background: linear-gradient(135deg, #f6d365, #fda085);
+  padding: 2rem 1rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tech-stack li:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+}
+
+.tech-stack img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.tech-stack li:hover img {
+  transform: rotate(15deg) scale(1.1);
+}
+
+.tech-stack span {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #222;
+  text-align: center;
+}
+
+/* ================== Contact Section ================== */
+#contact {
+  padding: 4rem 1rem;
+  background-color: #f4f7f9;
+}
+
+#contact h2 {
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #ff416c;
+}
+
+form {
+  max-width: 500px;
+  margin: auto;
+  background: #fff;
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  animation: fadeUp 1s ease forwards;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus, textarea:focus {
+  border-color: #ff416c;
+  box-shadow: 0 0 10px rgba(255,65,108,0.3);
+  outline: none;
+}
+
+.error {
+  color: #ff4b2b;
+  font-size: 0.9rem;
+  margin-top: 0.25rem;
+  display: block;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 50px;
+  background: #1f4037;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button[type="submit"]:hover,
+button[type="submit"]:focus {
+  background: #99f2c8;
+  color: #222;
+  transform: translateY(-2px);
+  outline: none;
+}
+
+#form-status {
+  margin-top: 1rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* ================== Footer ================== */
+footer {
+  padding: 1.5rem 1rem;
+  text-align: center;
+  background: linear-gradient(90deg, #ff416c, #ff4b2b);
+  color: #fff;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
+}
+
+/* ================== Animations ================== */
+@keyframes fadeUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeDown {
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* ================== Responsive ================== */
+@media(min-width: 640px) {
+  .tech-stack {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  }
+}
+
+@media(min-width: 1024px) {
+  #hero h2 {
+    font-size: 3rem;
+  }
+
+  #hero p {
+    font-size: 1.25rem;
+  }
+
+  form {
+    padding: 3rem;
+  }
+}
